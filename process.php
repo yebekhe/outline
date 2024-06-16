@@ -198,23 +198,27 @@ function modifyVpnString($vpnString) {
 
 function getTelegramChannelConfigs($username)
 {
-    $html = file_get_contents("https://t.me/s/" . $username);
-    $type = "ss";
-    $configs = [];
-    $configs[$type] = getConfigItems($type, $html);
-    $output = "";
-    foreach ($configs as $type => $configList) {
-        foreach ($configList as $soloConfig) {
-          if (is_valid($soloConfig)) {
-              $output .=
-                modifyVpnString($type .
-                "://" .
-                removeAngleBrackets($soloConfig)) .
-                "
+    $sourceArray = explode(",", $username);
+    foreach ($sourceArray as $source) {
+        $html = file_get_contents("https://t.me/s/" . $source);
+        $type = "ss";
+        $configs = [];
+        $configs[$type] = getConfigItems($type, $html);
+        $output = "";
+        foreach ($configs as $type => $configList) {
+            foreach ($configList as $soloConfig) {
+                if (is_valid($soloConfig)) {
+                    $output .=
+                        modifyVpnString($type .
+                        "://" .
+                        removeAngleBrackets($soloConfig)) .
+                        "
 ";
-          }
+                }
+            }
         }
     }
+    
     return $output;
 }
 
