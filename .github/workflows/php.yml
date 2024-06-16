@@ -1,4 +1,4 @@
-name: "Let's TVC!"
+name: "Outliner!"
 
 on:
   workflow_dispatch:
