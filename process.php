@@ -95,6 +95,18 @@ function ip_info($ip)
     return $result;
 }
 
+function cidr_match($ip, $range) {
+    list($subnet, $bits) = explode('/', $range);
+    if ($bits === null) {
+        $bits = 32;
+    }
+    $ip = ip2long($ip);
+    $subnet = ip2long($subnet);
+    $mask = -1 << (32 - $bits);
+    $subnet &= $mask;
+    return ($ip & $mask) == $subnet;
+}
+
 function is_cloudflare_ip($ip)
 {
     // Get the Cloudflare IP ranges
