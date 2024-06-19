@@ -246,11 +246,6 @@ function getTelegramChannelConfigs($username)
                         "
 ";
                 }
-                if ($key === $lastItemKey && $type === "ss") {
-                    $lastConfig = str_replace("&amp;", "&", modifyVpnString($type . "://" . removeAngleBrackets($soloConfig)));
-                    $ssToOutline = toOutline($lastConfig);
-                    file_put_contents("subscription/outline", $ssToOutline);
-                }
             }
         }
     }
