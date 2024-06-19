@@ -235,7 +235,9 @@ function getTelegramChannelConfigs($username)
         $configs[$type] = getConfigItems($type, $html);
         $output = "";
         foreach ($configs as $type => $configList) {
-            foreach ($configList as $soloConfig) {
+            $lastItemKey = count($configList) - 1;
+            
+            foreach ($configList as $key => $soloConfig) {
                 if (is_valid($soloConfig)) {
                     $output .=
                         modifyVpnString($type .
@@ -243,6 +245,11 @@ function getTelegramChannelConfigs($username)
                         removeAngleBrackets($soloConfig)) .
                         "
 ";
+                }
+                if ($key === $lastItemKey && $type === "ss") {
+                    $lastConfig = str_replace("&amp;", "&", modifyVpnString($type . "://" . removeAngleBrackets($soloConfig)));
+                    $ssToOutline = toOutline($lastConfig);
+                    file_put_contents("subscription/outline", $ssToOutline);
                 }
             }
         }
@@ -254,11 +261,6 @@ function getTelegramChannelConfigs($username)
 $base64 = filter_input(INPUT_GET, "b", FILTER_SANITIZE_STRING) ?? "true";
 $source = getenv('CONFIGS_SOURCE');
 $telegramConfigs = str_replace("&amp;", "&", getTelegramChannelConfigs($source));
-$telegramConfigsArray = explode("\n", $telegramConfigs);
-$lastItemKey = count($telegramConfigsArray) - 1;
-$lastConfig = $telegramConfigsArray[$lastItemKey];
-$ssToOutline = toOutline($lastConfig);
 
 file_put_contents("subscription/base64", base64_encode($telegramConfigs));
 file_put_contents("subscription/normal", $telegramConfigs);
-file_put_contents("subscription/outline", $ssToOutline);
