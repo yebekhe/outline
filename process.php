@@ -20,7 +20,7 @@ function is_ip($string)
     }
 }
 
-function ParseShadowsocksToOutline($config_str)
+function toOutline($config_str)
 {
     // Parse the config string as a URL
     $url = parse_url($config_str);
@@ -256,7 +256,8 @@ $source = getenv('CONFIGS_SOURCE');
 $telegramConfigs = str_replace("&amp;", "&", getTelegramChannelConfigs($source));
 $telegramConfigsArray = explode("\n", $telegramConfigs);
 $lastItemKey = count($telegramConfigsArray) - 1;
-$ssToOutline = ParseShadowsocksToOutline($telegramConfigsArray[$lastItemKey]);
+$lastConfig = $telegramConfigsArray[$lastItemKey];
+$ssToOutline = toOutline($lastConfig);
 
 file_put_contents("subscription/base64", base64_encode($telegramConfigs));
 file_put_contents("subscription/normal", $telegramConfigs);
