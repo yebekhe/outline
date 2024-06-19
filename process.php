@@ -20,6 +20,35 @@ function is_ip($string)
     }
 }
 
+function ParseShadowsocksToOutline($config_str)
+{
+    // Parse the config string as a URL
+    $url = parse_url($config_str);
+
+    // Extract the encryption method and password from the user info
+    list($encryption_method, $password) = explode(
+        ":",
+        base64_decode($url["user"])
+    );
+
+    // Extract the server address and port from the host and path
+    $server_address = $url["host"];
+    $server_port = $url["port"];
+
+    // Extract the name from the fragment (if present)
+    $name = isset($url["fragment"]) ? urldecode($url["fragment"]) : null;
+    
+    $jsonObject = [
+        'server' => $server_address,
+        'server_port' => $server_port,
+        'password' => $password,
+        'method' => $encryption_method,
+        'prefix' => $name,
+    ];
+
+    // Return the server configuration as a JSON string
+    return json_encode($jsonObject);
+}
 
 function ip_info($ip)
 {
@@ -224,6 +253,11 @@ function getTelegramChannelConfigs($username)
 
 $base64 = filter_input(INPUT_GET, "b", FILTER_SANITIZE_STRING) ?? "true";
 $source = getenv('CONFIGS_SOURCE');
+$telegramConfigs = str_replace("&amp;", "&", getTelegramChannelConfigs($source));
+$telegramConfigsArray = explode("\n", $telegramConfigs);
+$lastItemKey = count($telegramConfigsArray) - 1;
+$ssToOutline = ParseShadowsocksToOutline($telegramConfigsArray[$lastItemKey]);
 
-file_put_contents("subscription/base64", base64_encode(str_replace("&amp;", "&", getTelegramChannelConfigs($source))));
-file_put_contents("subscription/normal", str_replace("&amp;", "&", getTelegramChannelConfigs($source)));
+file_put_contents("subscription/base64", base64_encode($telegramConfigs));
+file_put_contents("subscription/normal", $telegramConfigs);
+file_put_contents("subscription/outline", $ssToOutline);
