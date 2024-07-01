@@ -204,7 +204,7 @@ function ip_info($ip)
 {
     // Check if the IP is from Cloudflare
     if (is_cloudflare_ip($ip)) {
-        $traceUrl = "https://raw.githubusercontent.com/ircfspace/cf-ip-ranges/main/export.ipv4";
+        $traceUrl = "http://$ip/cdn-cgi/trace";
         $traceData = convertToJson(file_get_contents($traceUrl));
         $country = $traceData['loc'] ?? "CF";
         return (object) [
