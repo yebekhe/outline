@@ -364,7 +364,7 @@ function generateName($config, $type) {
 
     $lantency = ping($configIp, $configPort, 1);
 
-    return "{$isEncrypted} {$configType}-{$configNetwork}-{$configTLS} {$configFlag} {$configLocation} {$configIp}:{$configPort} {$lantency}ms";
+    return "{$isEncrypted} {$configType}-{$configNetwork}-{$configTLS} {$configFlag} {$configLocation} {$lantency}";
 }
 
 function getNetwork($config, $type) {
