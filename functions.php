@@ -428,7 +428,7 @@ function ping($host, $port, $timeout) {
 }
 
 function generateHiddifyTags () {
-    $profileTitle = base64encode("HiN Outliner 🫧");
+    $profileTitle = base64_encode("HiN Outliner 🫧");
     return "#profile-title: {$profileTitle}\n#profile-update-interval: 1\n#subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531\n#support-url: https://hingroup.t.me\n#profile-web-page-url: https://Here_is_Nowhere.t.me
 ";
 }
