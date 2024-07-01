@@ -318,7 +318,7 @@ function getFlags($country_code)
     return $flag;
 }
 
-function generateName($config, $type, $number) {
+function generateName($config, $type) {
     $configsTypeName = [
         "vmess" => "VM",
         "vless" => "VL",
