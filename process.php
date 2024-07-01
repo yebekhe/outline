@@ -35,7 +35,7 @@ function getTelegramChannelConfigs($username)
 }
 
 $source = getenv('CONFIGS_SOURCE');
-$telegramConfigs = str_replace("&amp;", "&", getTelegramChannelConfigs($source));
+$telegramConfigs = generateHiddifyTags() . "\n\n" .  str_replace("&amp;", "&", getTelegramChannelConfigs($source));
 
 file_put_contents("subscription/base64", base64_encode($telegramConfigs));
 file_put_contents("subscription/normal", $telegramConfigs);
