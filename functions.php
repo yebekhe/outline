@@ -318,7 +318,7 @@ function getFlags($country_code)
     return $flag;
 }
 
-function generateName($config, $type) {
+function generateName($config, $type, $number) {
     $configsTypeName = [
         "vmess" => "VM",
         "vless" => "VL",
@@ -362,7 +362,9 @@ function generateName($config, $type) {
     $configNetwork = getNetwork($config, $type);
     $configTLS = getTLS($config, $type);
 
-    return "{$isEncrypted} {$configType}-{$configNetwork}-{$configTLS} {$configFlag} {$configLocation}-{$configIp}:{$configPort}";
+    $lantency = ping($configIp, $configPort, 1);
+
+    return "{$isEncrypted} {$configType}-{$configNetwork}-{$configTLS} {$configFlag} {$configLocation} {$configIp}:{$configPort} {$lantency}ms";
 }
 
 function getNetwork($config, $type) {
@@ -413,4 +415,14 @@ function is_valid($input)
 
 function removeAngleBrackets($link) {
     return preg_replace('/<.*?>/', '', $link);
+}
+
+function ping($host, $port, $timeout) {
+    $tB = microtime(true);
+    $fP = fSockOpen($host, $port, $errno, $errstr, $timeout);
+    if (!$fP) {
+        return "down";
+    }
+    $tA = microtime(true);
+    return round((($tA - $tB) * 1000), 0) . " ms";
 }
