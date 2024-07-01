@@ -202,6 +202,7 @@ function convertToJson($input) {
 
 function ip_info($ip)
 {
+    /*
     // Check if the IP is from Cloudflare
     if (is_cloudflare_ip($ip)) {
         $traceUrl = "http://$ip/cdn-cgi/trace";
@@ -211,6 +212,7 @@ function ip_info($ip)
             "country" => $country,
         ];
     }
+    */
 
     if (is_ip($ip) === false) {
         $ip_address_array = dns_get_record($ip, DNS_A);
