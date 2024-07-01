@@ -399,7 +399,7 @@ function isEncrypted($config, $type) {
 
 function getConfigItems($type, $input)
 {
-    $pattern = '/\b' . preg_quote($type, '/') . ':(\S+)\b/';
+    $pattern = '/(?<![a-zA-Z])'. $type .'[^\s]+/';
     preg_match_all($pattern, $input, $matches);
     return $matches[1];
 }
