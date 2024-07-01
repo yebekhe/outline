@@ -377,7 +377,7 @@ function getTLS($config, $type) {
     if (in_array($type, ["vless", "trojan"]) && $config['security'] === "tls") return "TLS";
     if (in_array($type, ["vless", "trojan"]) && $config['security'] === "none") return "N/A";
     if (in_array($type, ["tuic", "hysteria", "hysteria2", "hy2"])) return "N/A";
-    if ($type === "ss") return "TCP";
+    if ($type === "ss") return "N/A";
     return null;
 }
 
