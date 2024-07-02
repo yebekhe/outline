@@ -25,7 +25,7 @@ function getTelegramChannelConfigs($username)
             foreach ($configsArray as $config) {
                 if (is_valid($config)) {
                     $fixedConfig = str_replace("amp;", "", removeAngleBrackets($config));
-                    $correctedConfig = correctConfig("{$type}:{$fixedConfig}", $type);
+                    $correctedConfig = correctConfig("{$fixedConfig}", $type);
                     $output .= "{$correctedConfig}\n";
                 }
             }
