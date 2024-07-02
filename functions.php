@@ -369,7 +369,7 @@ function generateName($config, $type) {
 
 function getNetwork($config, $type) {
     if ($type === "vmess") return strtoupper($config['net']);
-    if (in_array($type, ["vless", "trojan"])) return strtoupper($config['type']);
+    if (in_array($type, ["vless", "trojan"])) return strtoupper($config['params']['type']);
     if (in_array($type, ["tuic", "hysteria", "hysteria2", "hy2"])) return "UDP";
     if ($type === "ss") return "TCP";
     return null;
@@ -378,8 +378,8 @@ function getNetwork($config, $type) {
 function getTLS($config, $type) {
     if ($type === "vmess" && $config['tls'] === "tls") return "TLS";
     if ($type === "vmess" && $config['tls'] === "") return "N/A";
-    if (in_array($type, ["vless", "trojan"]) && $config['security'] === "tls") return "TLS";
-    if (in_array($type, ["vless", "trojan"]) && $config['security'] === "none") return "N/A";
+    if (in_array($type, ["vless", "trojan"]) && $config['params']['security'] === "tls") return "TLS";
+    if (in_array($type, ["vless", "trojan"]) && $config['params']['security'] === "none") return "N/A";
     if (in_array($type, ["tuic", "hysteria", "hysteria2", "hy2"])) return "N/A";
     if ($type === "ss") return "N/A";
     return null;
