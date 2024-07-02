@@ -410,9 +410,12 @@ function getConfigItems($prefix, $string) {
     $count = strlen($prefix) + 3;
     $output = [];
     foreach($matches[0] as $match) {
-    	if (substr($match, 0, $count) === "{$prefix}://"){
-    		$output[] = $match;
-    	}
+        $newMatches = explode("<br/>", $match);
+        foreach ($newMatches as $newMatch) {
+            if (substr($newMatch, 0, $count) === "{$prefix}://"){
+                $output[] = $newMatch;
+            }
+        }
     }
     return $output;
 }
