@@ -3,10 +3,6 @@
     "vless": [],
     "trojan": [],
     "ss": [
-        "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpLYnFWZE4zQjg4SURrZG0yc0NjdTJS@vienna.telegavpn.com:61992#<i",
-        "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpEWTdINlVDYm1HRk5MOWMyZk5xRFg3@vienna.telegavpn.com:61992#<i",
-        "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp0V2NrbUxqUmVtM0Q2Tk9OZnZraWFa@outline.de.outlinekeys.net:20888#<i",
-        "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp4S2xwZDZVa3FEUkE0T3M5MFA4Zndx@moscow.telegavpn.com:60422#<i",
         "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxcXZCT1NLblZudXVHYWlOUGd3OHBQ@moscow.telegavpn.com:60422#<i",
         "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpaT25lbTBIRG4yMnRrOERiYXU2WkVE@vienna.telegavpn.com:61992#<i",
         "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpzUGZ2dld5QUV4eFJFbVpFVTh1M3lY@moscow.telegavpn.com:60422#<i",
@@ -22,7 +18,11 @@
         "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpLdkVib3hiZ0hNQ0ZxM2hUZzVkMUo1@moscow.telegavpn.com:60422#<i",
         "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpnbVdycnQyS3hna3NYUmRLMVVOUGF6@vienna.telegavpn.com:61992#<i",
         "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo4ZHh4NnZSc2VlbmNiNFJzZE9iRjRB@moscow.telegavpn.com:60422#<i",
-        "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTowYWR5YndQVWpDclZFYmZVMVNkbkRX@vienna.telegavpn.com:61992#<i"
+        "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTowYWR5YndQVWpDclZFYmZVMVNkbkRX@vienna.telegavpn.com:61992#<i",
+        "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpyN3VreFpHdjEyOHlsaTlKNEpUbmxp@paris.telegavpn.com:9802#<i",
+        "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3aThuSEgxNDVlUmxleTU2N0EzeGVN@outline.de.outlinekeys.net:20888#<i",
+        "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0Yno5SWpJaG1tRTdnT2J2MEpFcHpK@paris.telegavpn.com:9802#<i",
+        "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTptZDVNbFlLQWJ5Z2RESVZjbGdVM1ZY@outline.de.outlinekeys.net:20888#<i"
     ],
     "tuic": [],
     "hysteria": [],
