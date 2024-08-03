@@ -3,7 +3,6 @@
     "vless": [],
     "trojan": [],
     "ss": [
-        "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpqYUsyMUVJa0wwaTBMM0VjSzZ1MmdQ@moscow.telegavpn.com:60422#<i",
         "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpaY0RPZ3ptdzJPV2Q0TVhSMkN3Y2Vl@vienna.telegavpn.com:61992#<i",
         "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTplTjQ0blZsT3liZDZjMjlwdmVmM0hU@vienna.telegavpn.com:61992#<i",
         "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTozeWNoZFM2a3p6NnhiWUpWSXZpZkhE@moscow.telegavpn.com:60422#<i",
@@ -22,7 +21,8 @@
         "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpTNjhNWGd4TFd2UXFWNEJhQU01SWNv@outline.de.outlinekeys.net:20888#<i",
         "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpGamE2UEIwZnF3SnRHRUZJY0dvcTRF@outline.de.outlinekeys.net:20888#<i",
         "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiNlZZUW1MUUpXRFQ3SndsR08xT0RZ@moscow.telegavpn.com:60422#<i",
-        "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpQQm1RMU5KOU91ZXRDc1pMZEFlU0ww@outline.de.outlinekeys.net:20888#<i"
+        "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpQQm1RMU5KOU91ZXRDc1pMZEFlU0ww@outline.de.outlinekeys.net:20888#<i",
+        "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp6S0xzTTBER3JNcFRLWU15MHBZenNM@moscow.telegavpn.com:60422#<i"
     ],
     "tuic": [],
     "hysteria": [],
