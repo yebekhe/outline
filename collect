@@ -3,7 +3,6 @@
     "vless": [],
     "trojan": [],
     "ss": [
-        "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpSTUVyTk9TTUJkcmNDdGllcWRDam4y@212.113.106.76:29149#<i",
         "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpJTmxTWE9wOFVtaUhIV255bThMaGRm@sg.outlinekeys.net:52252#<i",
         "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpMZGdFOGh0ZHR0SDdkSUZtN0JpTUJj@212.113.106.76:29149#<i",
         "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBWEtaNjNLcFgxOUFtaVFQWGkyWEpM@sg.outlinekeys.net:52252#<i",
@@ -17,7 +16,8 @@
         "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHVTl2M3A1b096N2kzVVIxNzFXNDRT@sg.outlinekeys.net:52252#<i",
         "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpsalV0MXJwNHhxdlZBc1ZMemlsdjNq@212.113.106.76:29149#<i",
         "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0bUs4U2pvZm9XdEhkSXBHV1BKdERL@ams.telegavpn.org:19057#<i",
-        "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp6S1dUcEplSjVNQ2Z1Q0JGTjBKYThn@ams.telegavpn.org:19057#<i"
+        "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp6S1dUcEplSjVNQ2Z1Q0JGTjBKYThn@ams.telegavpn.org:19057#<i",
+        "ss:\/\/Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp3MndJcGpJTHBIbGF4MnRBeWFWNms2@ams.telegavpn.org:19057#<i"
     ],
     "tuic": [],
     "hysteria": [],
